@@ -43,11 +43,11 @@ With the above, a simple parser that scans for `{`, `[`, `"`, `'`, `` ` ``, `[-,
 | `[]`       | | frames an array of expressions.  Expressions are seprated by ',' and 'quoted' with (), {}, '', "", \'\' |
 |   |   |   |
 | `{}`, `()` | | frames expressions which may optionally have a name.                                                   |
-| `;` or `,` | `[]` | seprates elements.  At a high level can gather string and \0 terminate here.              |
+| `;` or `,` | `[]` | separates elements.  At a high level can gather string and \0 terminate here.              |
 | `]`        | `[]` | ends elements, terminates last expression element and \0 terminate here.                          |
 | `?`        | `{}` or `()` | ternary comparitor; next ':' is actually in expression and not name.     |
 | `:` or `=` | `{}` or `()` | separates a name for the field from the value of the field.              |
-| `;` or `,` | `{}` or `()` | seprates fields/expressions.  If a ':' is not before ',', value is an unnamed expression. |
+| `;` or `,` | `{}` or `()` | separates fields/expressions.  If a ':' is not before ',', value is an unnamed expression. |
 | `[`        | `{}` or `()` | starts an array    |
 | `(` or `[` | `{}` or `()` | starts a new framed expression with optionally named expressions.   |
 |   |   |   |
